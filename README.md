@@ -49,7 +49,7 @@ project-root/
 ├── views/
 │   └── index.html
 ├── assets/
-│   └── screenshot.png (agrega aquí tu imagen)
+│   └── screenshot.png 
 └── README.md
 ```
 
