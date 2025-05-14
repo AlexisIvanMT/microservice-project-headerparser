@@ -20,5 +20,27 @@ app.get('/api/hello', function (req, res) {
   res.json({ greeting: 'hello API' });
 });
 
+//==============================================
+// API endpoint to get the user's IP address, preferred language, and software
+// Recibe la dirección IP, idioma preferido y software del cliente
+// Middleware para analizar el cuerpo de la solicitud
+// ===============================================
+app.get('/api/whoami', (req, res) => {
+   // Obtener dirección IP
+    const ip = req.ip || req.connection.remoteAddress || req.socket.remoteAddress || req.connection.socket.remoteAddress;
 
+    // Obtener idioma preferido
+    const language = req.headers['accept-language']?.split(',')[0];
+
+    // Obtener información del User-Agent (software)
+    const software = req.headers['user-agent'];
+
+    // Enviar respuesta JSON
+    res.json({
+        ipaddress: ip,
+        language: language,
+        software: software
+    });
+});
+    
 module.exports = app;
