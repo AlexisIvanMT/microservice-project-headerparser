@@ -36,7 +36,6 @@ Este es un proyecto de microservicio API para freeCodeCamp que analiza los encab
 
 ![Vista previa de la app](assets/RequestHeaderParser.png)
 
-> Coloca tu captura de pantalla en la carpeta `assets` con el nombre `screenshot.png`.
 
 ## Estructura del proyecto
 
